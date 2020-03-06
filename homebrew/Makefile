@@ -12,12 +12,8 @@ clean:
 exploit.mscsb: payload.s Scripts main.s
 	$(PYTHON) ../pymsc/asm.py
 
-payload.s: payload.bin
+payload.s:
 	$(PYTHON) generate_payload.py
-
-payload.bin: crashText.txt
-	cp -f crashText.txt payload.bin
-	printf "\0" >> payload.bin
 
 main.s: rop_setup.s
 	$(PYTHON) generate_rop.py

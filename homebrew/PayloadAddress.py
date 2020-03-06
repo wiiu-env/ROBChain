@@ -1,0 +1,2 @@
+class PayloadAddress:
+    pass

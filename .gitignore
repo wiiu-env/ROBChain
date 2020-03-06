@@ -1,2 +1,7 @@
 *.swp
 wiiuhaxx_common/
+.idea/
+homebrew/exploit.mscsb
+homebrew/main.s
+homebrew/payload.s
+*.pyc
